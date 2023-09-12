@@ -1,0 +1,46 @@
+<mxfile host="Electron" modified="2023-09-12T23:28:02.257Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="EiKPwlSs86mK82hjwxUO" version="21.6.8" type="device">
+  <diagram name="Page-1" id="_POungGLw3vmARvK6uqu">
+    <mxGraphModel dx="1182" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-1" value="Project Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;rounded=1;shadow=0;glass=0;swimlaneFillColor=#5D00BA;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="670" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-2" value="Purchased Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;swimlaneFillColor=#990000;rounded=1;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+          <mxGeometry x="10" y="30" width="310" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-7" value="Sensors" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-2">
+          <mxGeometry x="95" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-12" value="Power&lt;br&gt;{Battery + AC-DC 5V}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-2">
+          <mxGeometry x="95" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-19" value="Processing&lt;br&gt;{Arduino Mega R3 and&lt;br&gt;Adafruit 881}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-2">
+          <mxGeometry x="95" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-22" value="Framing&lt;br&gt;{aluminum and Barrel}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-2">
+          <mxGeometry x="95" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-3" value="Designed Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;swimlaneFillColor=#FF8000;rounded=1;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+          <mxGeometry x="350" y="30" width="310" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-18" value="PCBs" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-3">
+          <mxGeometry x="55" y="30" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-15" value="AC-DC, Solenoid Controllers, and Photoelectric mountings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-18">
+          <mxGeometry x="40" y="40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="ymmCJjSlO44JO2tK2LS7-7" target="ymmCJjSlO44JO2tK2LS7-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="ymmCJjSlO44JO2tK2LS7-12" target="ymmCJjSlO44JO2tK2LS7-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="ymmCJjSlO44JO2tK2LS7-15" target="ymmCJjSlO44JO2tK2LS7-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
