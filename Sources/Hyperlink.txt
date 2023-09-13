@@ -1,0 +1,2 @@
+Full Bridge Capacitor Charging {https://electronics.stackexchange.com/questions/73863/cap-value-for-full-wave-rectifier-circuit}
+
