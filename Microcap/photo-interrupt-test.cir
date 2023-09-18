@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=106
-TXCnt=23
+NLCnt=123
+TXCnt=24
 
 [shapedef]
 Name=Battery
@@ -17,6 +17,10 @@ Line=22,-3,22,3
 Line=26,-7,26,7
 Line=26,0,48,0
 Current=32,8,16,8
+
+[shapedef]
+Name=Diode
+Root="Diode.root",0,0,0
 
 [shapedef]
 Name=Diode.root
@@ -44,6 +48,36 @@ Line=0,0,12,0
 Line=12,-8,12,8
 Line=18,-4,18,4
 Line=24,0,24,0
+
+[shapedef]
+Name=Inductor
+Line=42,0,48,0
+Line=0,0,5,0
+Arc=5,-7,17,7 , 11,-7,5,0
+Arc=13,-7,25,7 , 19,-7,13,0
+Arc=29,-7,41,7 , 35,-7,29,0
+Arc=21,-7,33,7 , 27,-7,21,0
+Arc=6,-7,18,7 , 18,0,12,-7
+Arc=14,-7,26,7 , 26,0,20,-7
+Arc=22,-7,34,7 , 34,0,28,-7
+Arc=30,-7,42,7 , 42,0,36,-7
+Line=11,-7,12,-7
+Line=19,-7,20,-7
+Line=27,-7,28,-7
+Line=35,-7,36,-7
+Arc=13,-4,17,2 , 13,-1,15,2
+Arc=29,-4,33,2 , 29,-1,31,2
+Arc=21,-4,25,2 , 21,-1,23,2
+Arc=14,-4,18,2 , 16,2,18,-1
+Arc=30,-4,34,2 , 32,2,34,-1
+Arc=22,-4,26,2 , 24,2,26,-1
+Line=15,2,16,2
+Line=23,2,24,2
+Line=31,2,32,2
+Line=5,5,9,5
+Line=41,5,41,9
+Line=39,7,43,7
+Current=32,8,16,8
 
 [shapedef]
 Name=Inv
@@ -74,6 +108,23 @@ Line=24,-8,24,-24
 Current=32,-24,32,-16
 Current=32,24,32,16
 Current=0,0,8,0
+
+[shapedef]
+Name=Opamp
+Root="Opamp.root",0,0,0
+
+[shapedef]
+Name=Opamp.root
+Line=0,48,6,48
+Line=0,0,5,0
+Line=6,-4,6,52
+Line=6,-4,48,24
+Line=6,52,48,24
+Line=48,24,72,24
+Line=10,12,14,12
+Line=12,10,12,14
+Line=10,36,14,36
+Line=4,0,6,0
 
 [shapedef]
 Name=PhotoTransistor2_NPN
@@ -172,7 +223,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=7425
-Used=165
+Used=166
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -207,7 +258,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=7937
-Used=482
+Used=483
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -291,6 +342,43 @@ Pin="Source",3,3,6,12
 Pin="Body",3,3,6,0
 Power=75
 
+[compdef]
+Name=Inductor
+Definition=Inductor
+Shape=Inductor
+Mask=7681
+Used=46
+memo=Inductor
+Label Offset=18,9,11,12
+PinCnt=2
+Pin="Plus",6,0,-5,-9
+Pin="Minus",0,0,-3,-9
+
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5889
+Used=24
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
+[compdef]
+Name=Comp
+Definition=Macro
+Shape=Opamp
+Mask=4096
+Used=13
+memo=Simple comparator macro
+Label Offset=34,36,-10,31
+PinCnt=3
+Pin="Inp",a,0,0,-10,-3
+Pin="Inm",a,0,6,-13,-1
+Pin="Out",a,9,3,-10,-1
+
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,52,1322,539
 Default Object=Color=#000080
@@ -368,7 +456,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=192,240,328,240
+Pxs=192,240,264,240
 
 [Wire]
 Pxs=664,800,664,824
@@ -610,9 +698,6 @@ Pxs=328,1296,656,1296
 [Wire]
 Pxs=1072,544,1072,576
 
-[Wire]
-Pxs=1072,640,1072,648
-
 [Comp]
 Name=MCR8SN
 Px=1072,640
@@ -633,7 +718,7 @@ V=TO-220AB
 
 [Comp]
 Name=Ground
-Px=1072,712
+Px=1072,720
 Rot=1
 
 [Comp]
@@ -656,9 +741,6 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1072,704,1072,712
-
-[Wire]
 Pxs=664,736,664,752
 
 [Wire]
@@ -671,7 +753,7 @@ Pxs=664,832,664,864
 Pxs=664,824,664,832
 
 [Wire]
-Pxs=752,832,1256,832
+Pxs=752,832,1336,832
 
 [Object]
 Object=FC_Process
@@ -815,10 +897,10 @@ Pxs=656,336,752,336
 Pxs=752,888,752,1272
 
 [Wire]
-Pxs=1072,544,1256,544
+Pxs=1072,544,1336,544
 
 [Wire]
-Pxs=1256,544,1256,832
+Pxs=1336,544,1336,832
 
 [Wire]
 Pxs=752,336,752,568
@@ -913,27 +995,27 @@ Px=1784,752
 Rot=1
 
 [Wire]
-Pxs=1784,656,1784,752
+Pxs=1784,656,1784,672
 
 [Wire]
-Pxs=1784,424,1784,520
+Pxs=1784,424,1784,432
 
 [Wire]
 Pxs=1784,424,1960,424
 
 [Comp]
 Name=Resistor
-Px=1784,520
+Px=1784,512
 Rot=7
 
 [Attr]
-ON=-12,6,PART
+ON=10,6,PART
 V=R15
 Style=8192
 
 [Attr]
 ON=17,22,RESISTANCE
-V=20
+V=0.5
 Style=8192
 
 [Attr]
@@ -941,7 +1023,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1784,568,1784,584
+Pxs=1784,560,1784,584
 
 [Comp]
 Name=Battery
@@ -1005,12 +1087,6 @@ Pxs=1072,576,1072,592
 [Wire]
 Pxs=1784,752,1960,752
 
-[Wire]
-Pxs=1072,648,1176,648
-
-[Wire]
-Pxs=1072,648,1072,656
-
 [Comp]
 Name=DE475-501N44A
 Enable=FALSE
@@ -1069,6 +1145,158 @@ V=75
 [Attr]
 ON=29,43,PACKAGE
 V=TO-204AA
+
+[Comp]
+Name=Inductor
+Px=1784,496
+Rot=5
+
+[Attr]
+ON=20,-48,PART
+V=L1
+Style=8192
+
+[Attr]
+ON=16,-29,INDUCTANCE
+V=1
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1784,496,1784,512
+
+[Comp]
+Name=Resistor
+Px=1784,672
+Rot=7
+
+[Attr]
+ON=10,6,PART
+V=R25
+Style=8192
+
+[Attr]
+ON=17,22,RESISTANCE
+V=.25
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1784,720,1784,752
+
+[Comp]
+Name=Diode
+Px=1704,496
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=D1
+Style=8192
+
+[Attr]
+ON=-76,26,MODEL
+V=$GENERIC
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1704,432,1704,496
+
+[Wire]
+Pxs=1704,432,1784,432
+
+[Wire]
+Pxs=1784,432,1784,448
+
+[Wire]
+Pxs=1704,560,1784,560
+
+[Wire]
+Pxs=1704,544,1704,560
+
+[Wire]
+Pxs=264,240,328,240
+
+[Wire]
+Pxs=1072,656,1144,656
+
+[Wire]
+Pxs=1072,640,1072,656
+
+[Wire]
+Pxs=1072,704,1072,720
+
+[Wire]
+Pxs=1072,704,1088,704
+
+[Wire]
+Pxs=1208,680,1216,680
+
+[Wire]
+Pxs=1280,640,1280,680
+
+[Comp]
+Name=Battery
+Px=1088,704
+Rot=4
+
+[Attr]
+ON=10,-27,PART
+V=V7
+Style=8192
+
+[Attr]
+ON=10,-41,VALUE
+V=2.5
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1136,704,1144,704
+
+[Comp]
+Name=Comp
+Px=1144,656
+
+[Attr]
+ON=34,36,PART
+V=X7
+Style=8192
+
+[Attr]
+ON=34,50,FILE
+V=Comp
+
+[Attr]
+ON=34,78,Param:VOH
+V=5
+
+[Attr]
+ON=34,92,Param:VOL
+V=0
+
+[Attr]
+ON=34,106,Param:GAIN
+V=53
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1216,680,1280,680
 
 [Grid Text]
 Text="Previous set input point"
@@ -1185,7 +1413,7 @@ CBorder=None
 
 [Grid Text]
 Text="Output"
-Px=1176,648
+Px=1280,640
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1256,6 +1484,14 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="supply"
+Px=264,240
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -1264,7 +1500,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -1453,9 +1689,9 @@ PrinterScale=0.88920454545454553
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=603,390
-Scale 3=1
-Px=1790,546
+SB 3=0,234
+Scale 3=1.3333333333333333
+Px=1104,740
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2304,10 +2540,10 @@ AliasID=6
 XExp=T
 YExp=v(output)
 XRng=0.003
-YRng=6,-1.5
+YRng=8,-2
 Options=LINEARX,LINEARY
 Range Grid X=0.0006
-Range Grid Y=1.5
+Range Grid Y=2
 Enable=Enable
 Line Color=#006200
 Text Color=#006200
@@ -2493,10 +2729,10 @@ AliasID=11
 XExp=T
 YExp=v(power)
 XRng=0.003
-YRng=80
+YRng=100,-25
 Options=LINEARX,LINEARY
 Range Grid X=0.0006
-Range Grid Y=16
+Range Grid Y=25
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2614,7 +2850,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="11"
+CurrentPage 0="6"
 
 [Pane]
 Analysis=AC
