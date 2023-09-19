@@ -1,0 +1,105 @@
+Resistor:
+
+Pick ohmage by desired voltage drop or current reduction
+
+Ohms law V=Ir
+
+determine resistor choice by wattage
+
+P=I^2 R
+
+usb 5V->500mA -> 10ohm
+
+500mA ^2 * 10hm -> 2.5W
+
+0805 smallest 603 [in american system NOT MM]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Capacitors:
+
+Polarized vs Electrolytic
+
+Z=(J Omega C)^(-1)
+
+capacitors have series inductances
+
+Z=j Omega Ls + Rs + 1/(J Omega C) + Rp
+Rp = resistance parallel
+Ls = inductor series
+C = cpacitance
+Rs = Resistance Series
+
+avoid self resonance | capcitor -> self resosnance -> inductance
+
+DC biases affects capacitance -> 1uf @ 0V -> 700nf @ 5v
+
+AC affects capcitence
+temp affects capacitence
+
+pzieo-electric capcitors exist
+
+COG-X7R, ETC are material properties [No Y series]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Inductor:
+
+Z=J Omega L
+
+parrallel capcitance
+quality Factor
+
+RF or Power 
+shieled or unshielded
+
+///////////////////////////////////////////////
+
+Diodes
+
+Forward Votage drop
+switching speed
+
+power recitifer-diodes
+
+reverse bias voltage
+
+Schottcky diodes
+  -high speed
+  - low breakdown
+
+/////////////////////////////////////////////
+
+
+MOSFETs
+-small signal or power
+  ->power rating
+  ->breakdown voltage
+  ->threshold region
+  ->transcoductance Rds on
+  ->gate capacitance [IGBT energy]
+  ->lead inductance
+-packaging
+
+POWER MOSFETS
+  -> must operate in triode or  cut-off
+    -dissapating power here
+  -> RDS=1/uCox(W/L)
+
+/////////////////////////////////////////
+BJTs
+
+small signal or power
+small signal Ft,beta, Vbe
+Power powere rating, Beta, Vce,sat
+  -smps
+  -darlingotn pair
+packaging
+
+///////////////////
+transistor packages:
+
+use metal heatsinks
+
+////////////////
+
