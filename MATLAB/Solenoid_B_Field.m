@@ -62,7 +62,7 @@ for jt=1:nloops %for number of turns per layer
     plot3(Points(:,1),Points(:,2),Points(:,3),'-K')
     axis([xmin xmax ymin ymax zmin zmax])
     hold on
-    quiver3([-1.1*R0,1,1*R0],[.2*R0,-.2R0])
+    %quiver3([-1.1*R0,1,1*R0],[.2*R0,-.2R0])
 end
 quiver3(X,Y,Z, Bx,By,Bz,'b')
 hold off

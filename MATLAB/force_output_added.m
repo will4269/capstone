@@ -13,7 +13,7 @@ u0=4*pi*10^(-7); %permability
 AWG=16;
 AWG_d=0.005*92^((36-AWG)/39); %diameter [inches]
 insul_thick=0.001; %insulation thickness [inches]
-Current=30.0; %[amps]
+Current=120.0; %[amps]
 R0=0.5; %radius to outside of barrel
 num_L=5; %number of Layers
 num_T=200; %number of Turns overall
@@ -158,9 +158,9 @@ end
 hold off
 
 %force seems off from predicted
-plot3(U_B)
+%plot3(U_B[:,61,61]U_B[61,:,61],)
 Force=gradient(U_B);
-Force_sum=sum(Force,"all");
+Force_sum=sum(abs(Force),"all");
 
 
 
