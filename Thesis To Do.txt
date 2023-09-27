@@ -1,7 +1,20 @@
--> Replace Renaldo for thesis: Sheaff most likely
+-> Replace Renaldo for thesis: Done Hummels
 
--> schedule meetings within 3 weeks
+-> schedule meetings within 3 weeks: Reviewing Doodle Poll at deciding by friday
 
--> thesis document and data combination
+-> thesis document and data combination: in progress
 
--> update proposal with alternative power sources for scope and budget
+-> update proposal with alternative power sources for scope and budget: Budget left + review
+To do
+
+-> Power supply rev
+
+-> Make meeting slideshow
+--Topics such as source type
+--But things like:
+-Projectile as a hoop to avoid uniform field that wastes mass (edited)
+-Trumpet like shape of solenoid to make b field curve faster on intake side
+-Reduce number of windings to increase current through loop
+-Discuss matlab file to go over field calculation, force, and time
+-ETC
+->Also go over feasibility
