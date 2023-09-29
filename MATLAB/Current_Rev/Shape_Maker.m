@@ -1,10 +1,11 @@
 clear all
+close all
 
 %The goal of this document is to plot a 3d shape to resemble the solenoid.
 
 Num_Points=20000; % number of points on entire curve
-Num_Turns=10; %number of turns total
-Shape="Rectangle"; %Determines shape of solenoid
+Num_Turns=11; %number of turns total
+Shape="Trumpet"; %Determines shape of solenoid
 %options Rectangle or Trumpet or Triangle
 % rectangle is a cylinder | rectangle cross section
 % Triangle is a sloped solenoid | triangular cross section
@@ -43,13 +44,15 @@ Step=Step/Theta_Step; %steps vertically wire's diameter divided by theta_step [u
 if(Shape=="Rectangle") 
     disp("# of turns for this is number of turns on layer all layers")
     disp("# of points for this is number of points total") 
-    prompt="Enter # of layers factor of Num_Turns\n\r";
+    prompt="Enter # of layers factor of Num_Turns\n\";
     Num_Layers=input(prompt);
-
+    
     Layer_points=Num_Points/Num_Layers; % dictates number of points per layer
 
     Layer_prev=0; %initilize Layer_prev for starting layer
     
+    Points_rev=Points_rev/Num_Layers; %redfine points to points per rev
+
     Point_3d=zeros(1,3,Num_Points); %store 3d values of solenoid points
 
     for Layers=1:Num_Layers %step through layers
@@ -64,7 +67,7 @@ if(Shape=="Rectangle")
            Rx=(Wire_d*0.5+Wire_d*Layer_prev+Layer_radii).*cos(Theta);
             %Expand radius
         end
-        for Layer_set=1:Num_Points/Num_Layers %for a layer of turns
+        for Layer_set=1:Layer_points %for a layer of turns
             %Point 3d works on 1x3xnum of point matrix
             %1x1x: is x
             %1x2x: is y
@@ -76,12 +79,12 @@ if(Shape=="Rectangle")
             if(Radius_Index==0)
                 Radius_Index=1;
             end
-            Point_3d(1,1,Layer_set+(Layer_prev*Num_Points/Num_Layers))=Rx(1,Radius_Index); %modulo is to loop around the circle
-            Point_3d(1,2,Layer_set+(Layer_prev*Num_Points/Num_Layers))=Ry(1,Radius_Index); %modulo is to loop around the circle
+            Point_3d(1,1,Layer_set+(Layer_prev*Layer_points))=Rx(1,Radius_Index); %modulo is to loop around the circle
+            Point_3d(1,2,Layer_set+(Layer_prev*Layer_points))=Ry(1,Radius_Index); %modulo is to loop around the circle
             if(mod(Layer_prev,2)==0)
-                Point_3d(1,3,Layer_set+(Layer_prev*Num_Points/Num_Layers))=Step*Layer_set; %adds constantly until top of solenoid
+                Point_3d(1,3,Layer_set+(Layer_prev*Layer_points))=Step*Layer_set; %adds constantly until top of solenoid
             else
-                Point_3d(1,3,Layer_set+(Layer_prev*Num_Points/Num_Layers))=(Step*Num_Points/Num_Layers)-(Step*Layer_set); %adds constantly until top of solenoid
+                Point_3d(1,3,Layer_set+(Layer_prev*Layer_points))=(Step*Layer_points)-(Step*Layer_set); %adds constantly until top of solenoid
             end
        
             %disp(((Layer_set+(Layer_prev*Num_Points/Num_Layers)))) err
@@ -130,7 +133,7 @@ if(Shape=="Triangle")
             Theta=linspace(0,2*pi*Turns,Points_rev*Turns); %angle step per rev
            Ry=(Wire_d*0.5+Wire_d*Layer_prev+Layer_radii).*sin(Theta);
            Rx=(Wire_d*0.5+Wire_d*Layer_prev+Layer_radii).*cos(Theta);
-           disp(Rx(1,1))
+           %disp(Rx(1,1)) %old error check on radius expansion
             %Expand radius
         end
 
@@ -149,7 +152,12 @@ if(Shape=="Triangle")
 
             Point_3d(1,1,Layer_set+Layer_set_prev)=Rx(1,Radius_Index); %modulo is to loop around the circle
             Point_3d(1,2,Layer_set+Layer_set_prev)=Ry(1,Radius_Index); %modulo is to loop around the circle
-            Point_3d(1,3,Layer_set+Layer_set_prev)=Step*Layer_set; %adds constantly until top of solenoid
+            if(mod(Layer_prev,2)==0)
+                Point_3d(1,3,Layer_set+Layer_set_prev)=Step*(Num_Points)*(Turns)-Step*Layer_set; %adds constantly until top of solenoid
+            else
+                Point_3d(1,3,Layer_set+Layer_set_prev)=Step*Layer_set; %adds constantly until top of solenoid
+            end
+            
             %disp(Point_3d(1,3,Layer_set))
             %disp(((Layer_set+(Layer_prev*Num_Points/Num_Layers)))) %err
             %check
