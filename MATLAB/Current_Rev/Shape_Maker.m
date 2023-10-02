@@ -3,9 +3,9 @@ close all
 
 %The goal of this document is to plot a 3d shape to resemble the solenoid.
 
-Num_Points=20000; % number of points on entire curve
-Num_Turns=11; %number of turns total
-Shape="Trumpet"; %Determines shape of solenoid
+Num_Points=100; % number of points on entire curve
+Num_Turns=10; %number of turns total
+Shape="Rectangle"; %Determines shape of solenoid
 %options Rectangle or Trumpet or Triangle
 % rectangle is a cylinder | rectangle cross section
 % Triangle is a sloped solenoid | triangular cross section
@@ -273,3 +273,5 @@ plot3(squeeze(Point_3d(1,1,:)),squeeze(Point_3d(1,2,:)),squeeze(Point_3d(1,3,:))
 xlabel("x[m]")
 ylabel("y[m]")
 zlabel("z[m]")
+
+clearvars -except Point_3d
