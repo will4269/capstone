@@ -1,10 +1,10 @@
 close all
 %%Inital 3d mesh maker
 %%Graph parameters
-dx=0.005; %step of meshgrid
+dx=0.004; %step of meshgrid
 u0=(4*pi)*10^(-7);
 current=30.0;
-scale=5;
+scale=8;
 %initial matrix
 
 %max value height
@@ -39,7 +39,6 @@ z=zmin:dz:zmax; %set array of z
 %%mesh run
 [X,Y,Z]=meshgrid(x,y,z);
 [HX,HY,HZ]=meshgrid(x,y,z);%hfield
-[BX,BY,BZ]=meshgrid(x,y,z);%bfield
 %From last time meshgrid was y,x,z {b-field calc} from force_output
 %added
 
@@ -124,30 +123,8 @@ xlabel("x[m]")
 ylabel("z[m]")
 %%H-field plotting end
 
-%%B-field area
-
-BX=u0.*HX;
-BY=u0.*HY;
-BZ=u0.*HZ;
-
-figure()
-quiver3(X,Y,Z,HX,HY,HZ)
-hold on
-plot3(squeeze(Point_3d(1,1,:)),squeeze(Point_3d(1,2,:)),squeeze(Point_3d(1,3,:)))
-title("vector field [B-field] No-internal Material 3d")
-xlim([xmin xmax])
-ylim([ymin ymax])
-zlim([zmin zmax])
-xlabel("x[m]")
-ylabel("y[m]")
-zlabel("z[m]")
 
 
-figure()
-quiver(Y(:,ceil(length(y)/2),:),Z(:,ceil(length(z)/2),:),BY(:,ceil(length(y)/2),:),BZ(:,ceil(length(z)/2),:))
-title("vector field [B-field] No-internal Material 2d")
-xlim([xmin xmax])
-ylim([ymin ymax])
-zlim([zmin zmax])
-xlabel("x[m]")
-ylabel("z[m]")
+
+%%clear all unneccesary
+clearvars -except Point_3d HX HY HZ u0 x y z X Y Z dz dx xmin xmax ymin ymax zmin zmax
