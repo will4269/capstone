@@ -1,0 +1,46 @@
+Huds, raycasting, 
+
+Indirect control is ideal when controlling multiple actors
+
+provide location
+
+they provide movement
+
+Those games with indirect controls are typically strategy games
+
+need raycasting, remote movement, HUD scripting, dash of AI
+
+-------------------------------------------------
+
+Raycast
+
+Ray is a streching line segment from a point.
+
+Needs point and direction
+
+First hit calls RayCastHit
+
+Script {Ray}
+-requires origin
+-requires direction
+-maxdist optional
+-Layermask (ignore collisions)
+-QueryTriggerInteraction(can it hit triggers)
+
+Physics.Raycast(origin, direction, out hit)
+passing to a definition for hit, 
+
+data sturct returned called RaycastHit.
+Temporary stored in hit
+
+stores vital information about collison
+{Collider, point, rigidbody, distance, transform} of what we hit
+
+put this in update()
+
+launchpoint
+navpoint
+temp
+hudscript
+
+Var (you figure out the data type) {late binding} 
