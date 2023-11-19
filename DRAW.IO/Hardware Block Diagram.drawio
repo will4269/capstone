@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-10-06T01:29:01.849Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="Ud-wNPNfvj5aBzGsLeFx" version="22.0.3" type="device">
+<mxfile host="Electron" modified="2023-11-19T22:17:41.093Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="vGKrymowcx0KlVPLWIhu" version="21.7.5" type="device">
   <diagram name="Page-1" id="_POungGLw3vmARvK6uqu">
-    <mxGraphModel dx="1434" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ymmCJjSlO44JO2tK2LS7-1" value="Project Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;rounded=1;shadow=0;glass=0;swimlaneFillColor=#5D00BA;" parent="1" vertex="1">
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-1" value="Project Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;rounded=0;shadow=0;glass=0;swimlaneFillColor=#5D00BA;" parent="1" vertex="1">
           <mxGeometry x="120" y="120" width="670" height="470" as="geometry" />
         </mxCell>
         <mxCell id="ymmCJjSlO44JO2tK2LS7-2" value="Purchased Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;swimlaneFillColor=#990000;rounded=1;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
@@ -13,19 +13,19 @@
         <mxCell id="ymmCJjSlO44JO2tK2LS7-7" value="Sensors" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
           <mxGeometry x="95" y="50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ymmCJjSlO44JO2tK2LS7-12" value="Power&lt;br&gt;{Capacitor Bank + AC-DC 5V}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-12" value="Power&lt;br&gt;{Capacitor + AC-DC 5V}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
           <mxGeometry x="95" y="150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymmCJjSlO44JO2tK2LS7-19" value="Processing&lt;br&gt;{Arduino Mega R3 and&lt;br&gt;Adafruit 881}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
           <mxGeometry x="95" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ymmCJjSlO44JO2tK2LS7-22" value="Framing&lt;br&gt;{aluminum and Barrel}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-22" value="Framing&lt;br&gt;{Wood and Barrel}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-2" vertex="1">
           <mxGeometry x="95" y="350" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymmCJjSlO44JO2tK2LS7-3" value="Designed Hardware" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;swimlaneFillColor=#FF8000;rounded=1;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
           <mxGeometry x="350" y="30" width="310" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="ymmCJjSlO44JO2tK2LS7-18" value="&lt;font color=&quot;#ffffff&quot;&gt;PCBs&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#000000;" parent="ymmCJjSlO44JO2tK2LS7-3" vertex="1">
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-18" value="PCBs" style="swimlane;whiteSpace=wrap;html=1;" parent="ymmCJjSlO44JO2tK2LS7-3" vertex="1">
           <mxGeometry x="55" y="30" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="ymmCJjSlO44JO2tK2LS7-15" value="AC-DC, Solenoid Controllers, and Photoelectric mountings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="ymmCJjSlO44JO2tK2LS7-18" vertex="1">

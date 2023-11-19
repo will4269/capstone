@@ -1,36 +1,36 @@
-<mxfile host="Electron" modified="2023-09-13T01:07:40.233Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="EeRcZ1GHlqR37lpLHs9Z" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2023-11-19T22:25:29.406Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="byZ4_t7pIjT-1oNEVqnt" version="21.7.5" type="device">
   <diagram name="Page-1" id="_POungGLw3vmARvK6uqu">
     <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ymmCJjSlO44JO2tK2LS7-1" value="Designed Project Software" style="swimlane;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;rounded=1;shadow=0;glass=0;swimlaneFillColor=#5D00BA;" parent="1" vertex="1">
+        <mxCell id="ymmCJjSlO44JO2tK2LS7-1" value="Designed Project Software" style="swimlane;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;rounded=0;shadow=0;glass=0;swimlaneFillColor=#5D00BA;" parent="1" vertex="1">
           <mxGeometry x="120" y="120" width="540" height="370" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-1" target="uDEKzufgYO-_LSpI3eap-3">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-1" target="uDEKzufgYO-_LSpI3eap-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-1" value="Initilization" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-1" value="Initilization" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
           <mxGeometry x="30" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-3" target="uDEKzufgYO-_LSpI3eap-5">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-3" target="uDEKzufgYO-_LSpI3eap-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-3" value="Wait for Trigger" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-3" value="Wait for Trigger" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
           <mxGeometry x="220" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-5" target="uDEKzufgYO-_LSpI3eap-3">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="ymmCJjSlO44JO2tK2LS7-1" source="uDEKzufgYO-_LSpI3eap-5" target="uDEKzufgYO-_LSpI3eap-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-8" value="Timing Complete" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uDEKzufgYO-_LSpI3eap-7">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-8" value="Timing Complete" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="uDEKzufgYO-_LSpI3eap-7" vertex="1" connectable="0">
           <mxGeometry x="0.09" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-5" value="Start Solenoids and Begin Timing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-5" value="Start Solenoids and Begin Timing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
           <mxGeometry x="400" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uDEKzufgYO-_LSpI3eap-9" value="Timing Program starts a timer at trigger press (T0). Then after the projectile reaches the end of the barrel it will reach a photo detector that will store measured time T1. After that it reaches the last photo detector which documents measured time T2.&lt;br&gt;&lt;br&gt;Launch time T_L=T1-T0&lt;br&gt;Speed=install_distance/(T2-T1)&lt;br&gt;&lt;br&gt;pass to BCD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ymmCJjSlO44JO2tK2LS7-1">
+        <mxCell id="uDEKzufgYO-_LSpI3eap-9" value="Timing Program starts a timer at trigger press (T0). Then after the projectile reaches the end of the barrel it will reach a photo detector that will store measured time T1. After that it reaches the last photo detector which documents measured time T2.&lt;br&gt;&lt;br&gt;Launch time T_L=T1-T0&lt;br&gt;Speed=install_distance/(T2-T1)&lt;br&gt;&lt;br&gt;pass to BCD" style="rounded=1;whiteSpace=wrap;html=1;" parent="ymmCJjSlO44JO2tK2LS7-1" vertex="1">
           <mxGeometry x="30" y="200" width="480" height="160" as="geometry" />
         </mxCell>
       </root>
