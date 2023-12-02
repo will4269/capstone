@@ -51,7 +51,8 @@ void setup() {
   del = 0;
   speed = "7.234";
   time = "10.45";
-  dist=0.0254; //space betwen board timing
+  //18inches and 5/16, between T1 and T2, 
+  dist=0.4651375; //space betwen boards timing
   fired=false; //indicates if triggered
   //pinMode(LED_BUILTIN, OUTPUT);
   attachInterrupt(digitalPinToInterrupt(time1), tim_1, RISING);
@@ -66,8 +67,8 @@ void setup() {
 
 void loop() {
   //fetch current inputs
-  in1=digitalRead(3);
-  in2=digitalRead(4);
+  in1=digitalRead(4);
+  in2=digitalRead(5);
   //state declaration
   //00idle
   //01fire
@@ -113,7 +114,7 @@ void loop() {
   //firing control
   if(mode=="_01_"&&fired==false){ //if in firing mode, and hasn't fired, trigger first mosfet
     digitalWrite(7,HIGH);//send power to trigger first thyristor
-    delay(40);
+    //delay(40);
     delayMicroseconds(40); //pulse period
     fired=true;
     T0=millis();//capture fire time
