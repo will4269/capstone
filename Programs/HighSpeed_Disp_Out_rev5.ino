@@ -26,7 +26,7 @@
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
 
-Adafruit_7segment matrix = Adafruit_7segment();
+Adafruit_7segment matrix = Adafruit_7segment(); //adafruit matrix
 
 bool clear,fire,fired,T1_thru,T2_thru; //input for clear, fire, fire_lock, T1 detect, T2 detect
 int del; //delay bits
@@ -34,8 +34,7 @@ int count_T=0; //exponent for time
 int count_S=0; //exponent for speed
 float T0, T1, T2; // Time_0, Time_1, Time_2
 float time,speed; //display values
-String mode="";
-String printer = "";
+String mode=""; //firing mode
 
 
 int time1=2; //pin for T1
@@ -53,6 +52,7 @@ void setup() {  //given from adafruit database
   
 
   //capstone code again
+
   T1_thru=false; //timing variable to prevent constant read
   T2_thru=false; //timing variable to prevet constant read
   pinMode(7, OUTPUT); //output mode for faster switching
@@ -113,12 +113,18 @@ void loop() {
   else if (del < 3000){  //setting print
     matrix.println(count_T); //count of exponent for time time=time*{10^-6}*{10^count_T} [S]
   }
+  else if (del < 3500){
+   matrix.println("mode"); //time print
+  }
+  else if(del < 4000){
+    matrix.println(mode); //mode to indicate firing, clear or idle
+  }
 
   //output strings
   matrix.writeDisplay();
   delay(2);
   del += 2;
-  if (del > 3000) {
+  if (del > 4000) {
     del = 0;
   }
   
